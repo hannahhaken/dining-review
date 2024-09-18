@@ -110,3 +110,21 @@ Caused by: org.h2.jdbc.JdbcSQLInvalidAuthorizationSpecException: Wrong user name
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:522)
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
 	... 50 more
+2024-09-16 15:53:35.063970+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000a    drop table if exists [*]user cascade "; expected "identifier"; SQL statement:
+
+    drop table if exists user cascade  [42001-224]
+2024-09-16 15:53:35.073992+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000a    create table [*]user (\000a        id bigint not null,\000a        city varchar(255),\000a        country varchar(255),\000a        username varchar(255),\000a        primary key (id)\000a    )"; expected "identifier"; SQL statement:
+
+    create table user (
+        id bigint not null,
+        city varchar(255),
+        country varchar(255),
+        username varchar(255),
+        primary key (id)
+    ) [42001-224]
+2024-09-16 15:56:39.708084+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000a    drop table if exists [*]user cascade "; expected "identifier"; SQL statement:
+
+    drop table if exists user cascade  [42001-224]
