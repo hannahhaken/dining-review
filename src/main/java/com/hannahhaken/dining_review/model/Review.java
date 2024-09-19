@@ -13,6 +13,9 @@ public class Review {
     private String reviewerUsername;
     private Long reviewScore;
     private String comment;
+    private enum Status {
+        PENDING, ACCEPTED, REJECTED
+    }
 
     public String getReviewerUsername() {
         return reviewerUsername;
