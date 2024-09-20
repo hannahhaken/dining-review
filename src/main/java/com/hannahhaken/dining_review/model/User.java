@@ -1,5 +1,6 @@
 package com.hannahhaken.dining_review.model;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -10,7 +11,10 @@ public class User {
     @Id
     @GeneratedValue
     private Long id;
+
+    @Column(unique = true)
     private String username;
+
     private String city;
     private String country;
 
